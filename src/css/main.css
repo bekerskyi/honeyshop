@@ -1,0 +1,51 @@
+h1,h2,h4,h5{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p {
+    font-size: 16px;
+}
+h1{
+    font-size: 110px;
+}
+h2 {
+    font-size: 50px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    font-size: 16px;
+}
+
+.menu{
+    margin: 0;
+    padding: 4px;
+
+}
+.menu li {
+    display: inline;
+}
+
+.footer-menu{
+    margin: 0;
+    padding: 4px;
+}
+.footer-menu li {
+    display: inline;
+}
+
+.transition{
+    background: url(../img/backgrounds/howtoorder-background.png) 0 center no-repeat;
+}
+
+.how-is-made{
+    background: url(../img/backgrounds/howismade-background.jpg) no-repeat 0 center fixed;
+}
+.how-to-order {
+    background-color: rgb(247, 189, 0);
+}
+
+.types-of-honey ul{
+    list-style-image: url(../icons/typesofhoney/check-icon.png);
+}

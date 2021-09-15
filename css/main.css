@@ -1,3 +1,6 @@
+@import url(../css/fontsans.css);
+@import url(../css/fontsans2.css);
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -43,15 +46,33 @@ h4 {
 
 header {
     position: relative;
-    height: 839px;
+    height: 950px;
     background: url(../img/backgrounds/header-background.jpg) center center/cover no-repeat;
-    background-size: cover;
 }
-header div{
+
+.header_menu {
+    position: relative;
+    padding: 30px 15px;
+}
+.header_content {
+    display: flex;
+    flex-direction: column;
+    margin: 300px auto;
+}
+
+.header_nav{
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    
+}
+.logo {
+    position: absolute;
+    left: 15px;
+    top: 15px;
 
 }
 .logo_img{
-    position: inherit;
     height: auto;
     width: 192px;
 }

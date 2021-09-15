@@ -1,7 +1,14 @@
-h1,
-h2,
-h4,
-h5 {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1,h2,h4,h5 {
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -27,9 +34,7 @@ h4 {
 }
 
 .menu {
-    margin: 0;
     padding: 4px;
-
 }
 
 .menu li {
@@ -37,13 +42,22 @@ h4 {
 }
 
 header {
-    background: url(../img/backgrounds/header-background.jpg);
+    position: relative;
+    height: 839px;
+    background: url(../img/backgrounds/header-background.jpg) center center/cover no-repeat;
     background-size: cover;
+}
+header div{
+
+}
+.logo_img{
+    position: inherit;
+    height: auto;
+    width: 192px;
 }
 
 
 .footer-menu {
-    margin: 0;
     padding: 4px;
 }
 

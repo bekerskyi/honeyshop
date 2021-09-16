@@ -23,27 +23,17 @@ img{
 }
 
 
-p {
-    font-size: 16px;
-}
-
 
 h1,
 h2,
 h3,
-h3,
+h4,
 h5,
 h6 {
     font-size: inherit;
     font-weight: inherit;
 }
 
-h1 {
-    font-size: 110px;
-    text-transform: uppercase;
-    color:#5a3733;
-
-}
 
 html,
 body {
@@ -55,75 +45,59 @@ body {
 
 }
 
+h1 {
+    font-size: 110px;
+    text-transform: uppercase;
+    color:#5a3733;
+    font-family: 'Signika Negative',sans-serif;
+    font-weight: bold;
 
-header {
-    position: relative;
-    height: 950px;
-    background: url(../img/backgrounds/header-background.jpg) center center/cover no-repeat;
+}
+.header_content .divider{
+    max-width: 57px;
+    height: 4px;
+    background-color: #eb6d2f;
 }
 
+
+
+.header {
+    min-height: 100%;
+    width: 100%;
+    background: url(../img/backgrounds/header-background.jpg)center center/cover no-repeat;
+}
+.header_icon{
+    max-height: 52.14px;
+    width: auto;
+}
 .header_menu {
     display: flex;
-    position: relative;
+    min-height: 112.14px;
+    align-items: center;
     padding: 30px 15px;
 }
 
-.menu {
+.header_nav{
+    margin: 0px 0px 0px 329px;
+}
+@media(max-width:992px){
+    .header_nav{
+        margin: 0px 0px 0px 250px;
+    }
+}
+
+.menu_list{
     display: flex;
+    flex-wrap: wrap;
 }
 
-.header_nav {
-    position: absolute;
-    right: 15px;
-    top: 30px;
-
+.menu_item:not(:last-child) {
+    margin: 0px 21px 0px 0px;
 }
 
-.header_menu .buy_link {
-    border: 1px;
+.menu_link {
+    color:#5a3733;
+    font-weight: 600;
+    line-height: calc(16/16*100%);
 }
 
-.logo {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-
-}
-
-.header_content {
-    display: flex;
-    flex-direction: column;
-    margin: 300px auto;
-}
-
-
-.logo_img {
-    height: auto;
-    width: 192px;
-}
-
-
-.footer-menu {
-    padding: 4px;
-}
-
-.footer-menu li {
-    display: inline;
-}
-
-.transition {
-    background: url(../img/backgrounds/howtoorder-background.png) 0 center no-repeat;
-}
-
-.how-is-made {
-    background: url(../img/backgrounds/howismade-background.jpg) fixed;
-    background-size: cover;
-}
-
-.how-to-order {
-    background-color: rgb(247, 189, 0);
-}
-
-.types-of-honey ul {
-    list-style-image: url(../icons/typesofhoney/check-icon.png);
-}

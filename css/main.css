@@ -1,48 +1,60 @@
-@import url(../css/fontsans.css);
-@import url(../css/fontsans2.css);
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-h1,h2,h4,h5 {
-    text-transform: uppercase;
-    font-weight: bold;
+a {
+    text-decoration: none;
 }
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+
 
 p {
     font-size: 16px;
 }
 
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 h1 {
     font-size: 110px;
+    text-transform: uppercase;
+    color:#5a3733;
+
 }
 
-h2 {
-    font-size: 50px;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-h4 {
+html,
+body {
+    height: 100%;
+    line-height: 1;
     font-size: 16px;
+    color: black;
+    font-family: 'Open Sans',sans-serif;
+
 }
 
-.menu {
-    padding: 4px;
-}
-
-.menu li {
-    display: inline;
-}
 
 header {
     position: relative;
@@ -51,28 +63,41 @@ header {
 }
 
 .header_menu {
+    display: flex;
     position: relative;
     padding: 30px 15px;
 }
-.header_content {
+
+.menu {
     display: flex;
-    flex-direction: column;
-    margin: 300px auto;
 }
 
-.header_nav{
+.header_nav {
     position: absolute;
     right: 15px;
     top: 30px;
-    
+
 }
+
+.header_menu .buy_link {
+    border: 1px;
+}
+
 .logo {
     position: absolute;
     left: 15px;
     top: 15px;
 
 }
-.logo_img{
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    margin: 300px auto;
+}
+
+
+.logo_img {
     height: auto;
     width: 192px;
 }

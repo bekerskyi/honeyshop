@@ -297,6 +297,7 @@ p.header_content_item {
 .why_img {
     display: block;
     max-width: 570px;
+    max-height: 612px;
 }
 
 .benefit-item img {

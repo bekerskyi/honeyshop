@@ -130,7 +130,7 @@ h3 {
 }
 
 .menu_link:hover {
-    color: #ffd832;
+    color: #efbf41;
 }
 
 
@@ -186,7 +186,7 @@ h3 {
 }
 
 .link_button:hover {
-    background-color: #ffd832;
+    background-color: #efbf41;
 }
 
 p.header_content_item {
@@ -196,7 +196,7 @@ p.header_content_item {
 
 /*-------------------------------Services-------------------------------*/
 .services {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 40px 0px 55px 0px;
     background: url(../img/backgrounds/services-background.jpg)center/cover no-repeat;
@@ -266,7 +266,7 @@ p.header_content_item {
 
 /*-------------------------------why choose us-------------------------------*/
 .why-choose-us {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: url(../img/backgrounds/whychooseus-background.jpg)center/cover no-repeat;
 }
@@ -321,7 +321,7 @@ p.header_content_item {
 
 /*-------------------------------Video Fixed-------------------------------*/
 .how-is-made {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 40px 0px 55px 0px;
     background: url(../img/backgrounds/howismade-background.jpg)center/cover no-repeat fixed;
@@ -368,7 +368,7 @@ p.header_content_item {
 /*-------------------------------Types of honey-------------------------------*/
 
 .types-of-honey {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 120px 0px 55px 0px;
     background: #f9f4f0 center/cover no-repeat fixed;
@@ -444,6 +444,10 @@ p.header_content_item {
     text-decoration: none;
     text-transform: capitalize;
 }
+.types_link_button:hover {
+    background-color: #efbf41;
+}
+
 
 .types-of-honey-item img {
     max-height: 100px;

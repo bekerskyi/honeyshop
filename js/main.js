@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', (e) => {
-    e.preventDefault();
     (function () {
         const deadline = '2022-1-1';
 

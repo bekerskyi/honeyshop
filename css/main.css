@@ -267,7 +267,7 @@ p.header_content_item {
 
 }
 
-.slider_btn_next,.slider_btn_prev {
+.btn_next,.btn_prev {
     text-decoration: none;
     text-align: center;
     padding: 9px 15px;

@@ -132,8 +132,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         // setInterval(nextItem,1000);
         showCurrentItem();
         const btn_next = document.querySelector('.slider_btn_next'),
-            btn_prev = document.querySelector('.slider_btn_prev'),
-            a = document.querySelector('a');
+            btn_prev = document.querySelector('.slider_btn_prev');
 
         btn_next.addEventListener('click', (e) => {
             nextItem();
@@ -146,8 +145,95 @@ window.addEventListener('DOMContentLoaded', (e) => {
         });
 
     })();
-    (function(){
+    (function () {
+        const items = [{
+                id: 1,
+                img: 'icons/whatwedo/honeyprod-icon.png',
+                title: 'Honey Production',
+                text: `We produce, bottle, and sell honey <br> harvested by our beekeepers. <br> `,
+                href: `about-us`
+            },
+            {
+                id: 2,
+                img: 'icons/whatwedo/honey-shop.png',
+                title: 'Honey Shop',
+                text: `We offer over 10 types of organic raw <br> honey in our online store. `,
+                href: `store`
 
-    });
+            },
+            {
+                id: 3,
+                img: 'icons/whatwedo/supplements-icon.png',
+                title: 'Supplements',
+                text: `You can buy bee pollen, propolis, and <br> hive mixtures.`,
+                href: `contacts`
+            },
+            {
+                id: 4,
+                img: 'icons/whatwedo/beekeeping.png',
+                title: 'Beekeeping',
+                text: `Feel free to book excursions and <br> workshops at our swaths. <br> <a href="#contacts"
+            style="color: yellow;">Learn More</a>`,
+                href: `contacts`
+            }
+
+        ];
+        let currentItem = 0;
+
+        function showCurrentItem() {
+            const itemsWrapper = document.querySelector('.slider_tabs');
+            let html = '';
+            html = `<div class="sliders_tab">
+            <img src="${items[currentItem].img}" alt="${items[currentItem].title}">
+            <h3>${items[currentItem].title}</h3>
+            <p>${items[currentItem].text}</p>
+            <a href="#${items[currentItem].href}" class="services_link">Learn More</a>
+        </div>`;
+            const nextItem = currentItem + 1 < items.length ? currentItem + 1 : 0;
+            html += `<div class="sliders_tab">
+            <img src="${items[nextItem].img}" alt="${items[nextItem].title}">
+            <h3>${items[nextItem].title}</h3>
+            <p>${items[nextItem].text}</p>
+            <a href="#${items[nextItem].href}" class="services_link">Learn More</a>
+        </div>`;
+            const next2Item = nextSlide + 1 < items.length ? nextItem + 1 : 0;
+            html += `<div class="sliders_tab">
+            <img src="${items[next2Item].img}" alt="${items[next2Item].title}">
+            <h3>${items[next2Item].title}</h3>
+            <p>${items[next2Item].text}</p>
+            <a href="#${items[next2Item].href}" class="services_link">Learn More</a>
+        </div>`;
+
+            itemsWrapper.innerHTML = html;
+        }
+
+        function nextItem() {
+            currentItem++;
+            if (currentItem >= items.length) currentItem = 0;
+            showCurrentItem();
+        }
+
+        function prevItem() {
+            currentItem--;
+            if (currentItem < 0) currentItem = items.length - 1;
+            showCurrentItem();
+        }
+
+        // setInterval(nextItem,1000);
+        showCurrentItem();
+        const btn_next = document.querySelector('.slider .services_btn_next'),
+              btn_prev = document.querySelector('.slider .services_btn_prev');
+
+        btn_next.addEventListener('click', (e) => {
+            nextItem();
+            e.preventDefault();
+        });
+
+        btn_prev.addEventListener('click', (e) => {
+            prevItem();
+            e.preventDefault();
+        });
+
+    })();
 
 });

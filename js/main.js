@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (e) => {
+window.addEventListener('DOMContentLoaded', () => {
     (function () {
         const deadline = '2022-1-1';
 
@@ -145,7 +145,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     })();
     (function () {
-        const items = [{
+        const items = [
+            {
                 id: 1,
                 img: 'icons/whatwedo/honeyprod-icon.png',
                 title: 'Honey Production',
@@ -171,8 +172,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
                 id: 4,
                 img: 'icons/whatwedo/beekeeping.png',
                 title: 'Beekeeping',
-                text: `Feel free to book excursions and <br> workshops at our swaths. <br> <a href="#contacts"
-            style="color: yellow;">Learn More</a>`,
+                text: `Feel free to book excursions and <br> workshops at our swaths. <br> <a href="#contacts"`,
                 href: `contacts`
             }
 
@@ -220,15 +220,15 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
         // setInterval(nextItem,1000);
         showCurrentItem();
-        const btn_next = document.querySelector('.slider .services_btn_next'),
-              btn_prev = document.querySelector('.slider .services_btn_prev');
+        const next = document.querySelector('.services_btn_next'),
+              prev = document.querySelector('.services_btn_prev');
 
-        btn_next.addEventListener('click', (e) => {
+        next.addEventListener('click', (e) => {
             nextItem();
             e.preventDefault();
         });
 
-        btn_prev.addEventListener('click', (e) => {
+        prev.addEventListener('click', (e) => {
             prevItem();
             e.preventDefault();
         });

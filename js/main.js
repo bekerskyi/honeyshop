@@ -5,9 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
         function getTimeRemaining(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date()),
                 days = Math.floor(t / (1000 * 60 * 60 * 24)),
-                hours = Math.floor((t / (1000 * 60 * 60) % 24)),
-                minutes = Math.floor((t / 1000 / 60) % 60),
-                seconds = Math.floor((t / 1000) % 60);
+                hours = Math.floor(t / (1000 * 60 * 60) % 24),
+                minutes = Math.floor(t / 1000 / 60 % 60),
+                seconds = Math.floor(t / 1000 % 60);
 
             return {
                 'total': t,
@@ -106,13 +106,15 @@ window.addEventListener('DOMContentLoaded', () => {
             <p>${items[currentItem].text}</p>
         <a class="types_link_button" href="#store">Shop Now</a>
         </div>`;
-            const nextItem = currentItem + 1 < items.length ? currentItem + 1 : 0;
-            html += `<div class="types-of-honey-item">
-            <img src="${items[nextItem].img}" alt="${items[nextItem].title}">
-            <h3>${items[nextItem].title}</h3>
-            <p>${items[nextItem].text}</p>
-        <a class="types_link_button" href="#store">Shop Now</a>
+            if (window.innerWidth > 600) {
+                const nextItem = currentItem + 1 < items.length ? currentItem + 1 : 0;
+                html += `<div class="types-of-honey-item">
+                <img src="${items[nextItem].img}" alt="${items[nextItem].title}">
+                <h3>${items[nextItem].title}</h3>
+                <p>${items[nextItem].text}</p>
+                <a class="types_link_button" href="#store">Shop Now</a>
         </div>`;
+            }
             itemsWrapper.innerHTML = html;
         }
 
@@ -130,6 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // setInterval(nextItem,1000);
         showCurrentItem();
+        window.addEventListener('resize', showCurrentItem);
         const btn_next = document.querySelector('.slider_btn_next'),
             btn_prev = document.querySelector('.slider_btn_prev');
 
@@ -145,8 +148,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     })();
     (function () {
-        const items = [
-            {
+        const items = [{
                 id: 1,
                 img: 'icons/whatwedo/honeyprod-icon.png',
                 title: 'Honey Production',
@@ -188,20 +190,24 @@ window.addEventListener('DOMContentLoaded', () => {
             <p>${items[currentItem].text}</p>
             <a href="#${items[currentItem].href}" class="services_link">Learn More</a>
         </div>`;
-            const nextItem = currentItem + 1 < items.length ? currentItem + 1 : 0;
-            html += `<div class="sliders_tab">
+            if (window.innerWidth > 600) {
+                const nextItem = currentItem + 1 < items.length ? currentItem + 1 : 0;
+                html += `<div class="sliders_tab">
             <img src="${items[nextItem].img}" alt="${items[nextItem].title}">
             <h3>${items[nextItem].title}</h3>
             <p>${items[nextItem].text}</p>
             <a href="#${items[nextItem].href}" class="services_link">Learn More</a>
         </div>`;
-            const next2Item = nextSlide + 1 < items.length ? nextItem + 1 : 0;
-            html += `<div class="sliders_tab">
+                if (window.innerWidth > 900) {
+                    const next2Item = nextItem + 1 < items.length ? nextItem + 1 : 0;
+                    html += `<div class="sliders_tab">
             <img src="${items[next2Item].img}" alt="${items[next2Item].title}">
             <h3>${items[next2Item].title}</h3>
             <p>${items[next2Item].text}</p>
             <a href="#${items[next2Item].href}" class="services_link">Learn More</a>
         </div>`;
+                }
+            }
 
             itemsWrapper.innerHTML = html;
         }
@@ -220,8 +226,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // setInterval(nextItem,1000);
         showCurrentItem();
+        window.addEventListener('resize', showCurrentItem);
         const next = document.querySelector('.services_btn_next'),
-              prev = document.querySelector('.services_btn_prev');
+            prev = document.querySelector('.services_btn_prev');
 
         next.addEventListener('click', (e) => {
             nextItem();
